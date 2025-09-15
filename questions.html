@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Few Questions For You...</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="girly-background">
+  <div class="container animated-background">
+    <h1 class="fancy-text">Just a few questions, my dear Shruuthi...</h1>
+    <form action="{{ url_for('questions') }}" method="post" class="question-form">
+      <div class="question-group">
+        <p class="question-text">Question 1: Do you think I am a good boy (Be honest! 😉)</p>
+        <label><input type="radio" name="q1" value="yes" required> Yes, I do!</label>
+        <label><input type="radio" name="q1" value="no"> Hmm, sometimes no.</label>
+      </div>
+      <div class="question-group">
+        <p class="question-text">Question 2: Do you notice the efforts I make to impress you?</p>
+        <label><input type="radio" name="q2" value="yes" required> Yes, definitely!</label>
+        <label><input type="radio" name="q2" value="no"> Not really</label>
+      </div>
+      <div class="question-group">
+        <p class="question-text">Question 3: Do you feel comfortable talking to me ?</p>
+        <label><input type="radio" name="q3" value="yes" required> Yes, it's so sweet and new!</label>
+        <label><input type="radio" name="q3" value="no"> Nah, I've seen it all before.</label>
+      </div>
+      <div class="question-group">
+        <p class="question-text">Question 4: Do you think I make an effort to stay in touch?</p>
+        <label><input type="radio" name="q4" value="yes" required> Yes, I believe you are!</label>
+        <label><input type="radio" name="q4" value="no"> I'm not so sure...</label>
+      </div>
+      <div class="question-group">
+        <p class="question-text">Question 5: Do you think I am serious about us ?</p>
+        <label><input type="radio" name="q5" value="yes" required> Yes, I do!</label>
+        <label><input type="radio" name="q5" value="no"> Not really,</label>
+      </div>
+        <button type="submit" class="heart-button">See My Fate!</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

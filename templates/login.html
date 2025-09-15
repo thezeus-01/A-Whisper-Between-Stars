@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello Shruuthi!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="girly-background">
+  <div class="container animated-background">
+    <h1 class="fancy-text">Welcome, Shruuthi!</h1>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if not authenticated %}
+      <form action="{{ url_for('authenticate') }}" method="post" class="login-form">
+        <label for="password">Your Special Date:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="heart-button">Enter the World</button>
+      </form>
+    {% else %}
+      <p class="fancy-text bigger-text">Authentication successful </p>
+      <p class="fancy-text">Do you wish to proceed on this little journey ?</p>
+      <div class="button-group">
+        <a href="{{ url_for('proceed', choice='yes') }}" class="heart-button">Yes, Let's! 🥰</a>
+        <a href="{{ url_for('proceed', choice='no') }}" class="heart-button decline">No, not right now.</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

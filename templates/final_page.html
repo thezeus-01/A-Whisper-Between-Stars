@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Final Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="girly-background">
+  <div class="container animated-background text-center">
+    <h1 class="fancy-text special-heading">✨ A Gentle Whisper ✨</h1>
+    <p class="proposal-text">{{ message }}</p>
+    {% if show_start_over %}
+      <a href="{{ url_for('login') }}" class="heart-button mt-30">Back to Home</a>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

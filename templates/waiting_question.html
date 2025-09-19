@@ -12,16 +12,16 @@
     <p class="proposal-text bigger-text">
        Shruuthi, I have one more important question for you.
     </p>
-    <p class="proposal-text">
-      I need about 1.5 to 2 years to secure a good job and be able to truly take care of my loved ones, including you and our future family.
+    <p class="proposal-text bigger-text">
+      If you think about your parents, I can convince them — mine never objected to me. I just need 6 months to get a good job and be stable, so I can take care of you, our future family, and my loved ones
     </p>
     <p class="question-text bold-text">
       Will you wait for me? Will you be by my side as I work towards our future?
     </p>
     <form action="{{ url_for('waiting_question') }}" method="post" class="question-form mt-30">
       <div class="radio-group">
-        <label><input type="radio" name="wait_for_me" value="yes" required> Yes, I will wait for you, always!🥰</label>
-        <label><input type="radio" name="wait_for_me" value="no"> I'm not sure if I can wait that long...</label>
+        <label><input type="radio" name="wait_for_me" value="yes" required> Yes, I will </label>
+        <label><input type="radio" name="wait_for_me" value="no"> noo </label>
       </div>
       <button type="submit" class="heart-button">My Answer</button>
     </form>
@@ -30,3 +30,4 @@
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
+
